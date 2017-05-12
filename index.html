@@ -1,28 +1,52 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://i.icomoon.io/public/temp/36ed82ba2b/UntitledProject/style.css">
-    <link rel="stylesheet" href="https://i.icomoon.io/public/temp/0170c7e453/UntitledProject/style.css">
+    <link href="styles/base.css" rel="stylesheet" type="text/css">
+    <link href="styles/layout.css" rel="stylesheet" type="text/css">
+    <link href="styles/module.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://i.icomoon.io/public/temp/b5fa98ec42/UntitledProject/style.css">
+    <link rel="stylesheet" href="https://i.icomoon.io/public/temp/8d5d688b6b/UntitledProject/style-svg.css">
+<script defer src="https://i.icomoon.io/public/temp/8d5d688b6b/UntitledProject/svgxuse.js"></script>
+<link rel="stylesheet" href="https://i.icomoon.io/public/temp/4ef52cbc09/UntitledProject/style-svg.css">
+<script defer src="https://i.icomoon.io/public/temp/4ef52cbc09/UntitledProject/svgxuse.js"></script>
+<link rel="stylesheet" href="https://i.icomoon.io/public/temp/ad8b5bc312/UntitledProject/style-svg.css">
+<script defer src="https://i.icomoon.io/public/temp/ad8b5bc312/UntitledProject/svgxuse.js"></script>
+<link rel="stylesheet" href="https://i.icomoon.io/public/temp/a4c7ade174/UntitledProject/style-svg.css">
+<script defer src="https://i.icomoon.io/public/temp/a4c7ade174/UntitledProject/svgxuse.js"></script>
   </head>
   <body>
-    <nav id="main-nav">
-      <header class="site-header">
-        <section class="heading1">
-          <h1> Welcome to Rylee Andrews's Awesome Portfolio </h1>
-        </section>
+    <div id="icon"><svg class="icon icon-menu"><use xlink:href="#icon-menu"></use></svg></div>
+    <header class="site-header">
+      <section class="heading1">
+        <h1> Welcome to Rylee Andrews's Awesome Portfolio </h1>
+      </section>
         <nav id="main-nav">
           <ul>
-          <li><a href="https://github.com/RyleeAndrews" class="icon-github"><li>
-
-          <li class="tab" data-content="articles"><a href="#" class="icon-home">Home</a></li>
-
+          <li><a href="https://github.com/RyleeAndrews"><svg class="icon icon-github"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-github"></use></svg>Github</a><li>
+          <li><div class="tab" data-content="articles"></div><a href="#" class="icon-home">Home</a></li>
+          <li><a href="https://twitter.com"><svg class="icon icon-twitter"><use xlink:href="#icon-twitter"></use></svg>Twitter</a></li>
+          <li><a href="https://skiwhitefish.com"><svg class="icon icon-address-book"><use xlink:href="#icon-address-book"></use></svg>About</a></li>
 </ul>
-
-      </nav>
+  </nav>
     </header>
+    <main>
+
+      <section id="new-article">
+        <article class="clearfix" data-content"cat">
+          <header>
+          <h1> Title </h1>
+          <div class="byline">
+            By <address><a href=""> Author Name </a></address> published <time pubdate-datetime="05-12-17"> Publish Time </time>
+          </div>
+        </header>
+        <section class="article-body"><p>ppodjksadgkjfkgjaksjgkjkasdjgkaskjdgkjksadjjgskdkgdksajafksdkjfkasdjkgjkasdjgkjadskjgksjdklgjksdkflksdlfkdl</p></section>
+      </article>
+    </section>
+</main>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script src="jsfiles/blog.js"></script>
-    <script src="jsfiles/app.js"></script>
+    <script src="./jsfiles/blog.js"></script>
+    <script src="./jsfiles/app.js"></script>
   </body>
 </html>
