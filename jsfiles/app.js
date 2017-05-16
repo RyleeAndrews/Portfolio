@@ -1,5 +1,6 @@
 'use strict';
 var articles = [];
+var articleView = {};
 function Article (rawDataObj){
   this.title = rawDataObj.title;
   this.githubUrl = rawDataObj.githubUrl;
