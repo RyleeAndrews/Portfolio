@@ -1,5 +1,6 @@
 'use strict';
 var articles = [];
+var articleView = {};
 function Article (rawDataObj){
   this.title = rawDataObj.title;
   this.githubUrl = rawDataObj.githubUrl;
@@ -8,10 +9,6 @@ function Article (rawDataObj){
   this.body = rawDataObj.body;
 }
 
-
-$(document).ready(function() {
-  $('body').css('background-color', 'beige');
-})
 
 if ($(window).width() < 640) {
   $(document).ready(function() {
