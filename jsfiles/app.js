@@ -9,18 +9,23 @@ function Article (rawDataObj){
 }
 
 
-$(document).ready(function () {
-  $('ul li').eq(1).remove();
-})
-
 $(document).ready(function() {
   $('body').css('background-color', 'beige');
 })
-$(document).ready(function () {
-  $('#main-nav').hide();
-})
-$('#icon').on('click', function () {
-  $('#main-nav').show();
+
+if ($(window).width() < 640) {
+  $(document).ready(function() {
+    $('ul').hide();
+    $('#burger').show();
+  })
+}
+else {
+  $(document).ready(function() {
+    $('ul').show();
+  })
+}
+$('#burger').on('click', function () {
+  $('ul').show();
 })
 Article.prototype.toHtml = function (){
   var $newArticle = $('new-article').clone();
