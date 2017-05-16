@@ -4,6 +4,7 @@ function Article (rawDataObj){
   this.title = rawDataObj.title;
   this.githubUrl = rawDataObj.githubUrl;
   this.author = rawDataObj.author;
+  this.authorUrl = rawDataObj.authorUrl
   this.publishedOn = rawDataObj.publishedOn;
   this.body = rawDataObj.body;
 }
@@ -33,5 +34,24 @@ $('i').on('click', function () {
   $('i').fadeOut('slow');
 })
 Article.prototype.toHtml = function (){
-  var $newArticle = $('new-article').clone();
+  var template = $('#articles-template').html()
+  var templateRender = Handlebars.compile(template);
+
+  this.daysAgo = parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000);
+  this.publishStatus = this.publishedOn ? `published ${this.daysAgo} days ago` : '(draft)';
+
+  return templateRender(this);
+
+
 };
+rawData.sort(function(a,b) {
+  return (new Date(b.publishedOn)) - (new Date(a.publishedOn));
+});
+
+rawData.forEach(function(articleObject) {
+  articles.push(new Article(articleObject));
+});
+
+articles.forEach(function(article){
+  $('.article-body').append(article.toHtml());
+});

@@ -1,15 +1,15 @@
 .fa-bars {
   float:right;
 }
-main {
-  max-width: 80%;
-}
-section {
-  max-width: 60%;
-}
-article.article-body {
+.article-body {
   max-width: 50%;
 }
 .top-header {
   float:left;
+}
+.byline {
+  color:#DCDCFF;
+}
+.main-header {
+  width:50px;
 }
