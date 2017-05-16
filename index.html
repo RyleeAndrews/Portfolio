@@ -1,15 +1,49 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="style.css" rel="stylesheet" type="text/css">
+  <meta charset="UTF-8">
+  <title>Lab 1</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="vendor/styles/normalize.css">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/layout.css">
+  <link rel="stylesheet" href="styles/module.css">
 </head>
 <body>
-  <header>
-    <h1> Rylee Andrews' Awesome Portfolio </h1>
-  </header>
-  <div class="icons">
-    <a href="https://github.com/RyleeAndrews">Github</a>
-    <a href="https://twitter.com">Twitter</a>
-  </div>
-</body>
-<html>
+<header class="top-header">
+  <i id="burger" class="fa fa-bars" aria-hidden="true"></i>
+  <section class="main-header">
+    <h1>
+      Rylee's Awesome Portfolio Full of Wisdom
+    </h1>
+    <h2> And sometimes stupidity </h2>
+  </section>
+  <nav class="main-nav">
+    <ul>
+      <li class="tab" data-content="articles"><a href="#" class="fa fa-home" aria-hidden="true">Home</a></li>
+      <li class="tab" data-content="about"><a href="#" class="fa fa-address-book" aria-hidden="true">About</a></li>
+      <li><a href="http://twitter.com" class="fa fa-twitter-square" aria-hidden="true">Twitter</a></li>
+      <li><a href="https://github.com/RyleeAndrews" class="fa fa-github-square" aria-hidden="true">GitHub</a></li>
+    </ul>
+  </nav>
+</header>
+    <main>
+      <section id="new-article">
+        <article class="articles" data-content"cat">
+          <header>
+          <h1> Title </h1>
+          <div class="byline">
+            By <address><a href=""> Author Name </a></address> published <time pubdate-datetime="05-12-17"> Publish Time </time>
+          </div>
+        </header>
+        <section class="article-body">
+      </article>
+    </section>
+</main>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+      <script src="https://use.fontawesome.com/1e54b95966.js"></script>
+    <script src="jsfiles/blog.js"></script>
+    <script src="jsfiles/app.js"></script>
+  </body>
+</html>

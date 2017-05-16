@@ -3,18 +3,27 @@ var articles = [];
 var articleView = {};
 function Article (rawDataObj){
   this.title = rawDataObj.title;
-  this.author = rawDataObj.author;
   this.githubUrl = rawDataObj.githubUrl;
+  this.author = rawDataObj.author;
   this.publishedOn = rawDataObj.publishedOn;
   this.body = rawDataObj.body;
 }
 
-$(document).ready(function () {
-  $('.icons').hide();
+
+if ($(window).width() < 640) {
+  $(document).ready(function() {
+    $('ul').hide();
+    $('#burger').show();
+  })
+}
+else {
+  $(document).ready(function() {
+    $('ul').show();
+  })
+}
+$('#burger').on('click', function () {
+  $('ul').show();
 })
-$('#ham-icon').on('click', function () {
-  $('.icons').show();
-})
-$(document).ready(function() {
-  $('body').css('background-color', 'beige');
-})
+Article.prototype.toHtml = function (){
+  var $newArticle = $('new-article').clone();
+};

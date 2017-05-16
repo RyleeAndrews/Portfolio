@@ -1,0 +1,15 @@
+.fa-bars {
+  float:right;
+}
+main {
+  max-width: 80%;
+}
+section {
+  max-width: 60%;
+}
+article.article-body {
+  max-width: 50%;
+}
+.top-header {
+  float:left;
+}

@@ -1,0 +1,22 @@
+body {
+  background-color: black;
+  background-image: url('flathead.jpg');
+}
+
+li {
+  display:inline;
+  color:black;
+}
+@media only screen and (max-width:640px){
+  li {
+    display:block;
+  }
+}
+@media only screen and (min-width:640px){
+  i#burger {
+    display:none;
+  }
+}
+.byline {
+  color:#DCDCFF;
+}

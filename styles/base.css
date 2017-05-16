@@ -1,0 +1,35 @@
+
+
+h1,h2 {
+  color:#DCDCFF;
+}
+
+
+/*TEXT STYLES
+=======================================*/
+p {
+  font-size: 1em;
+  color:white;
+}
+#burger {
+  font-size: 3.5em;
+  float:right;
+}
+address {
+  display: inline-block;
+}
+
+/*LINK STYLES
+=======================================*/
+
+a, a:link, a:active {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover, a:focus {
+  color: black;
+}
+
+a:visited {
+}
