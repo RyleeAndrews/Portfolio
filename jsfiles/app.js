@@ -14,15 +14,16 @@ function Article (rawDataObj){
 if ($(window).width() < 640) {
   $(document).ready(function() {
     $('ul').hide();
-    $('#burger').show();
+    $('#burgers').show();
   })
 }
 else {
   $(document).ready(function() {
     $('ul').show();
+    $('#burgers').hide();
   })
 }
-$('#burger').on('click', function () {
+$('#burgers').on('click', function () {
   $('ul').show();
 })
 $('ul li:first').on('click', function() {

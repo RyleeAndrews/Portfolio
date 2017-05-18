@@ -1,15 +1,5 @@
-.fa-bars {
-  float:right;
-}
-.article-body {
-  max-width: 50%;
-}
-.top-header {
-  float:left;
-}
-.byline {
-  color:#DCDCFF;
-}
-.main-header {
-  width:50px;
+.clearfix::after {
+  content:"";
+  display:table;
+  clear:both;
 }
