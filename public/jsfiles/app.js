@@ -11,7 +11,14 @@ function Article (rawDataObj) {
 }
 
 Article.all = [];
-
+let index = (acc,cur);
+Article.all.map(function(articles){
+  return {
+    body: this.body,
+    title: this.title,
+  }
+})
+Article.all.reduce(index)
 Article.prototype.toHtml = function() {
   let template = Handlebars.compile($('#article-template').text());
 
@@ -30,6 +37,9 @@ Article.loadAll = function(rawData) {
   rawData.forEach(function(ele) {
     Article.all.push(new Article(ele));
   })
+  rawdata.forEach(function(article){
+    $('.article-body').append(article.toHtml());
+  });
 }
 
 Article.fetchAll = function() {
