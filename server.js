@@ -13,7 +13,7 @@ app.get('/index', function(request,response){
   response.sendFile('public/index.html', {root: '.'});
 })
 
-app.post('/articles', bodyParser, function() {
+app.post('/articles', bodyParser, function(request,response) {
   console.log(request.body);
   response.send('Posting to the server!');
 })

@@ -2,5 +2,5 @@
 const articleDisplay = {};
 
 articleDisplay.handleMainNav = function() {
-  
+
 }
