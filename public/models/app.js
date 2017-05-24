@@ -18,7 +18,7 @@ Article.all.map(function(articles){
     title: this.title,
   }
 })
-Article.all.reduce(index)
+Article.all.reduce(index);
 Article.prototype.toHtml = function() {
   let template = Handlebars.compile($('#article-template').text());
 
