@@ -1,13 +1,12 @@
 'use strict';
-var app = app || {};
-
 (function(module) {
   const articleController = {};
+  articleController.index = () => {
+    app.Article.fetchAll(app.articleDisplay.initIndexPage);
 
-  articleController.initArticlePage = function(){
-    app.Article.fetchAll(app.articleView.initIndexPage);
-    $('.main-nav').hide();
+    $('.article-body').hide();
     $('.article-body').show();
-  }
+  };
+
   module.articleController = articleController;
 })(app);

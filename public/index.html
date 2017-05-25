@@ -16,6 +16,20 @@
     <p>{{publishedOn}}</p>
     {{{body}}}
   </script>
+  <script id="repo-template" type="text/x-handlebars-template">
+    <li>
+      <a href="{{html_url}}" target="_blank">
+        <h3>{{name}}</h3>
+      </a>
+      <p>Description: {{description}}</p>
+      <p>Language: {{language}}</p>
+      <p>Created: {{created_at}}</p>
+      <p>Last updated: {{updated_at}}</p>
+      {{#if watchers_count}}
+        <p>{{watchers_count}} watching this repo</p>
+      {{/if}}
+    </li>
+  </script>
 </head>
 <body>
   <header class="clearfix">
@@ -37,14 +51,31 @@
     </nav>
         <section class="article-body">
     </section>
-</main>
+    <section id="about" class="tab-content">
+      <header>
+        Welcome to my Blog
+      </header>
+      <section>
+        <h1>Some of my intrests:</h1>
+        <ul>
+          <li>Coding</li>
+          <li>Sharing what I've learned</li>
+          <li>Hanging with my family</li>
+        </ul>
+      </section>
+    </section>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
       <script src="https://use.fontawesome.com/1e54b95966.js"></script>
-    <script src="jsfiles/app.js"></script>
-    <script src="jsfiles/articleDisplay.js"
-    <script>
-      Article.fetchAll();
-    </script>
+      <script src="/vendor/scripts/page.js"></script>
+      
+
+      <script src="/models/app.js"></script>
+      <script src="/views/articleDisplay.js"</script>
+      <script src="/controllers/articlecontroller.js"></script>
+      <script src="/models/repo.js"></script>
+      <script src="/views/repoView.js"></script>
+      <script src="/controllers/aboutcontrollers.js"></script>
+      <script src="/scripts/controllers/routes.js"></script>
   </body>
 </html>

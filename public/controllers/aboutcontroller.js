@@ -7,8 +7,8 @@ var app = app || {};
 
 
   aboutController.initAboutPage = function() {
-    $('.main-nav').hide();
-    $('.fa-address-book').show();
+    $('.article-body').hide();
+    $('#about').show();
   }
 
 

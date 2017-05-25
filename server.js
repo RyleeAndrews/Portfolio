@@ -1,11 +1,12 @@
 'use strict';
+const pg = require('pg');
+const fs = require('fs');
 const express = require('express');
-const app = express();
-
-const bodyParser = require('body-parser').urlencoded({extended:true});
-
 const PORT = process.env.PORT || 3000;
-
+const bodyParser = require('body-parser');
+const app = express();
+const conString = 'postgres://localhost:5432';
+const client = new pg.Client(conString);
 app.use(express.static('./public'));
 
 app.get('/index', function(request,response){
