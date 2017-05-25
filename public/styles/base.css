@@ -1,8 +1,9 @@
+
 main {
-  max-width: 80%;
+  max-width: 100%;
 }
 section {
-  max-width: 60%;
+  max-width: 100%;
 }
 
 h1,h2 {
@@ -15,12 +16,13 @@ h1,h2 {
 p {
   font-size: 1em;
   color:white;
+
 }
 body {
   background-color: black;
   line-height: 1.5;
   font-size: 100%;
-  width:50px;
+  width:100%;
 }
 
 li {
@@ -33,7 +35,7 @@ li {
   }
 }
 @media only screen and (min-width:640px){
-  i#burger {
+  #burger {
     display:none;
   }
 }
@@ -50,7 +52,7 @@ a, a:link, a:active {
 }
 
 a:hover, a:focus {
-  color: black;
+  color: #45FBCD;
 }
 
 a:visited {

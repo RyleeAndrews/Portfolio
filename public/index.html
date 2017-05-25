@@ -16,6 +16,20 @@
     <p>{{publishedOn}}</p>
     {{{body}}}
   </script>
+  <script id="repo-template" type="text/x-handlebars-template">
+    <li>
+      <a href="{{html_url}}" target="_blank">
+        <h3>{{name}}</h3>
+      </a>
+      <p>Description: {{description}}</p>
+      <p>Language: {{language}}</p>
+      <p>Created: {{created_at}}</p>
+      <p>Last updated: {{updated_at}}</p>
+      {{#if watchers_count}}
+        <p>{{watchers_count}} watching this repo</p>
+      {{/if}}
+    </li>
+  </script>
 </head>
 <body>
   <header class="clearfix">
@@ -29,13 +43,12 @@
   </header>
     <nav class="main-nav">
       <ul>
-        <li class="tab" data-content="articles"><a href="index.html" class="fa fa-home" aria-hidden="true">Home</a></li>
-        <li class="tab" data-content="about"><a href="about.html" class="fa fa-address-book" aria-hidden="true">About</a></li>
+        <li class="tab" data-content="articles"><a href="/" class="fa fa-home" aria-hidden="true">Home</a></li>
+        <li class="tab" data-content="about"><a href="/about" class="fa fa-address-book" aria-hidden="true">About</a></li>
         <li><a href="http://twitter.com" class="fa fa-twitter-square" aria-hidden="true">Twitter</a></li>
         <li><a href="https://github.com/RyleeAndrews" class="fa fa-github-square" aria-hidden="true">GitHub</a></li>
       </ul>
     </nav>
-    <main>
         <section class="article-body">
     </section>
     <section id="about" class="tab-content">
@@ -51,17 +64,18 @@
         </ul>
       </section>
     </section>
-  </main>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
       <script src="https://use.fontawesome.com/1e54b95966.js"></script>
-      <script src="/scripts/models/githubToken.js"></script>
-    <script src="models/app.js"></script>
-    <script src="/scripts/views/articleDisplay.js"></script>
-    <script src="/scripts/controllers/articleController.js"></script>
-    <script src="/models/repo.js"></script>
-    <script src="/views/repoview.js"></script>
-    <script src="/scripts/controllers/aboutController.js"></script>
-    <script src="/scripts/controllers/routes.js"></script>
+      <script src="/vendor/scripts/page.js"></script>
+      
+
+      <script src="/models/app.js"></script>
+      <script src="/views/articleDisplay.js"</script>
+      <script src="/controllers/articlecontroller.js"></script>
+      <script src="/models/repo.js"></script>
+      <script src="/views/repoView.js"></script>
+      <script src="/controllers/aboutcontrollers.js"></script>
+      <script src="/scripts/controllers/routes.js"></script>
   </body>
 </html>
