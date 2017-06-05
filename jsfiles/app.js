@@ -20,18 +20,24 @@ else {
     $('ul').show();
   })
 }
+$('#about').hide();
+
 $('#burger').on('click', function () {
   $('ul').show();
 })
-$('ul li:first').on('click', function() {
-  $('ul li:first').hide();
+
+$('.fa-address-book').on('click', function(){
+  $('#about').show()
 })
-$('ul li').eq(1).on('click', function() {
-  $('ul li:first').show();
+
+$('.fa-home').on('click', function(){
+  $('#about').hide();
 })
+
 $('i').on('click', function () {
   $('i').fadeOut('slow');
 })
+
 Article.prototype.toHtml = function (){
   var $newArticle = $('new-article').clone();
 };
